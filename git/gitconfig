@@ -129,9 +129,11 @@
 [gpg]
 	program = gpg2
 [user]
+  name = Leik Lima-Eriksen
+  email = leik.lima-eriksen@lyse.net
 	signingkey = A7BAF41516806AA4
 [commit]
-	gpgsign = true
+  #gpgsign = true
 [github]
 	oauth-token = 95f24a771368b63cecf9c1c76e3044f3df984995
 [difftool "sourcetree"]
