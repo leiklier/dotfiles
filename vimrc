@@ -10,15 +10,17 @@ endif
 
 " ================ General Config ====================
 
-set number                      "Line numbers are good
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
-set autoread                    "Reload files changed outside vim
-
+set number                          "Line numbers are good
+set backspace=indent,eol,start      "Allow backspace in insert mode
+set history=1000                    "Store lots of :cmdline history
+set showcmd                         "Show incomplete cmds down the bottom
+set showmode                        "Show current mode down the bottom
+set gcr=a:blinkon0                  "Disable cursor blink
+set visualbell                      "No sounds
+set autoread                        "Reload files changed outside vim
+set mouse=a                         "Enable mouse point-and-click in vim
+let g:NERDTreeMouseMode=3           " Enable mouse click in NERDTree
+set cursorline                      "Highlight cursorline
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -40,6 +42,9 @@ if filereadable(expand("~/.vim/vundles.vim"))
   source ~/.vim/vundles.vim
 endif
 au BufNewFile,BufRead *.vundle set filetype=vim
+
+" ========== Add FuZzyFinder to &runtimepath ========
+set rtp+=/usr/local/opt/fzf
 
 " ================ Turn Off Swap Files ==============
 
@@ -79,6 +84,11 @@ set list listchars=tab:\ \ ,trail:·
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
+" =================== Lines =========================
+" Enable a hybrid of relative line numbering and absolute line numbering: 
+set relativenumber
+set number
+
 " ================ Folds ============================
 
 set foldmethod=indent   "fold based on indent
@@ -115,4 +125,4 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
-so ~/.yadr/vim/settings.vim
+so ~/dotfiles/vim/settings.vim
