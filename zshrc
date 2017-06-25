@@ -6,7 +6,8 @@ export GPG_TTY=$(tty)
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$HOME/bin:/usr/local/bin:/usr/local/anaconda3/bin:/opt/metasploit-framework/bin:/Library/TeX/texbin:$PATH
+export PATH=/usr/local/sbin:$HOME/bin:/usr/local/bin:/home/leiklier/anaconda3/bin:/opt/metasploit-framework/bin:/Library/TeX/texbin:$PATH
+
 # Import .bashrc and .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
@@ -14,20 +15,20 @@ export PATH=/usr/local/sbin:$HOME/bin:/usr/local/bin:/usr/local/anaconda3/bin:/o
 export ZSH=~/.oh-my-zsh
 
 # Set default user
-# it will hide "user@hostname" when locally logged in. 
+# it will hide "user@hostname" when locally logged in.
 #DEFAULT_USER="leiklier"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
-# DEFAULT: 
+# DEFAULT:
 # ZSH_THEME="robbyrussell"
 
-# Themes that have been tested, and that I also do like: 
+# Themes that have been tested, and that I also do like:
 # ZSH_THEME="powerlevel9k/powerlevel9k"
 
-# CURRENT: 
+# CURRENT:
 ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
