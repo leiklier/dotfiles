@@ -11,7 +11,7 @@ export PATH=/usr/local/sbin:$HOME/bin:/usr/local/bin:/home/leiklier/anaconda3/bi
 # Include "dot-*"-commands in $PATH: 
 export PATH=$HOME/dotfiles/bin:$HOME/dotfiles/bin/dot:$PATH
 
-# Import .bashrc and .profile
+# Import ~/.bashrc and ~/.profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
 # Path to your oh-my-zsh installation.
@@ -138,4 +138,5 @@ bashcompinit
 
 autoload -U compinit && compinit
 
-
+# Additional customization (Categorized)
+for config_file ($HOME/dotfiles/zsh/runcoms/interactive/*.zsh) source $config_file
