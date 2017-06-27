@@ -12,10 +12,10 @@ export PATH=/usr/local/sbin:$HOME/bin:/usr/local/bin:/home/leiklier/anaconda3/bi
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=~/dotfiles/zsh/oh-my-zsh
 
 # Set default user
-# it will hide "user@hostname" when locally logged in.
+# This hides "user@hostname" when locally logged in.
 #DEFAULT_USER="leiklier"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -54,7 +54,7 @@ DISABLE_UPDATE_PROMPT=true
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+#ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
