@@ -14,8 +14,8 @@ export PATH=$HOME/dotfiles/bin:$HOME/dotfiles/bin/dot:$PATH
 # Import ~/.bashrc and ~/.profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
-# Path to your oh-my-zsh installation.
-export ZSH=~/dotfiles/zsh/oh-my-zsh
+# Path to the oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
 
 # Set default user
 # This hides "user@hostname" when locally logged in.
