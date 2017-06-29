@@ -3,11 +3,11 @@
 # Download the repo to ~/dotfiles
 DOT=~/dotfiles
 echo "Downloading the dotfiles-repository to $DOT"
-#git clone git@github.com:leiklier/dotfiles.git $DOT
+git clone git@github.com:leiklier/dotfiles.git $DOT
 
 # Back up old dotfiles to ~/dotfiles.old
 OLD=~/dotfiles.old
-echo "Backing up all old dotfiles to $OLD"
+echo "Backing up all old dotfiles to $OLD and symlinking new dotfiles to home-directory"
 mkdir $OLD
 
 cd ~
@@ -20,7 +20,7 @@ mv .bashrc $OLD
 # Link new dotfiles:
 ln -s ${DOT}/bash/runcoms/bash_logout .bash_logout
 ln -s ${DOT}/bash/runcoms/bash_profile .bash_profile
-ln -s ${DOT}/bash/runcoms/bashrc .bashrc
+ln -s ${DOT}/bashrc .bashrc
 
 # =============== Zsh ===============
 # Backup:
@@ -34,7 +34,7 @@ mv .zshrc $OLD
 # Link new dotfiles:
 ln -s ${DOT}/zsh/oh-my-zsh .oh-my-zsh
 ln -s ${DOT}/zsh/runcoms/zlogin .zlogin
-ln -s ${DOT}/zsh/runcoms .zlogout
+ln -s ${DOT}/zsh/runcoms/zlogout .zlogout
 ln -s ${DOT}/zsh/runcoms/zprofile .zprofile
 ln -s ${DOT}/zsh/runcoms/zshenv .zshenv
 ln -s ${DOT}/zshrc .zshrc
