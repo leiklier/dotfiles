@@ -3,14 +3,16 @@
 # Download the repo to ~/dotfiles
 DOT=~/dotfiles
 echo "Downloading the dotfiles-repository to $DOT"
-git clone --recursive -j8 git@github.com:leiklier/dotfiles.git $DOT
+git clone git@github.com:leiklier/dotfiles.git $DOT
+cd $DOT
+git submodule update --init # Pull all submodules
 
 # Back up old dotfiles to ~/dotfiles.old
 OLD=~/dotfiles.old
 echo "Backing up all old dotfiles to $OLD and symlinking new dotfiles to home-directory"
+cd ~
 mkdir $OLD
 
-cd ~
 # =============== Bash ==============
 # Backup:
 mv .bash_logout $OLD
@@ -45,8 +47,8 @@ mv .gitconfig $OLD
 mv .gitignore $OLD
 
 # Link new dotfiles:
-ln -s ${DOT}/git/gitconfig
-ln -s ${DOT}/git/gitignore
+ln -s ${DOT}/git/gitconfig .gitconfig
+ln -s ${DOT}/git/gitignore .gitignore
 
 # ============== tmux =================
 # Backup:
