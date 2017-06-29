@@ -77,7 +77,7 @@ mv .spacemacs $OLD
 
 # Link new dotfiles:
 ln -s ${DOT}/emacs.d .emacs.d
-ln -s ${DOT}/.spacemacs .spacemacs
+ln -s ${DOT}/spacemacs .spacemacs
 
 # Finished! Inform user:
 echo "SUCCESS!\n"
