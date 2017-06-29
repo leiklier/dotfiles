@@ -3,7 +3,7 @@
 # Download the repo to ~/dotfiles
 DOT=~/dotfiles
 echo "Downloading the dotfiles-repository to $DOT"
-git clone git@github.com:leiklier/dotfiles.git $DOT
+git clone --recursive -j8 git@github.com:leiklier/dotfiles.git $DOT
 
 # Back up old dotfiles to ~/dotfiles.old
 OLD=~/dotfiles.old
