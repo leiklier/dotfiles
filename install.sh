@@ -1,14 +1,99 @@
+# Author: Leik Lima-Eriksen
+# Created: June 2017
+
 #!/bin/bash
 
-# Download the repo to ~/dotfiles
-DOT=~/dotfiles
+# CONSTANTS:
+OLD_DEFAULT=~/dotfiles.old
+DOT_DEFAULT=~/dotfiles
+
+# ==================== Configuration / User input ===========================
+
+# ======== Display information ==========
+
+echo "
+#############################################################
+#############################################################
+###                                                       ###
+###                  Leik Lima-Eriksen's                  ###
+###                                                       ###
+###                       Dotfiles                        ###
+###                                                       ###
+#############################################################
+#############################################################
+"
+
+
+# Output some important info about this script:
+echo "
+You are about to download and install the dotfiles belonging to
+Leik Lima-Eriksen. Many of the settings are very personal, and might
+not fit your style. My dotfiles will replace those already available
+in you home-directory. You may choose to save a backup to ${OLD}
+during the installation process.
+"
+
+# ============ Accept user input ===========
+
+# Choose installation-destination:
+echo "Please enter the directory in which the repository should be cloned:"
+echo "(Default: ${DOT_DEFAULT}. Press [ENTER] for default)"
+
+read DOT_INPUT
+
+# Use $DOT_INPUT if string was inserted; else use DOT_DEFAULT
+if [ ${#DOT_INPUT} -gt 0 ]
+then
+  DOT="${DOT_INPUT}/dotfiles"
+else
+  DOT=$DOT_DEFAULT
+fi
+
+# [TODO] Prompt if user want a backup of dotfiles:
+while true; do
+  read -p "Do you want to backup dotfiles?" yn
+  case $yn in
+    [Yy]* ) BACKUP=true; OLD=$OLD_DEFAULT; break;;
+    [Nn]* ) BACKUP=false; OLD="/tmp/dotfiles.old"; break;;
+    * ) echo "Please answer [y]es or [n]o.";;
+  esac
+done
+
+# ======== Display a summary of settings =======
+echo "
+Please review your settings before beginning the installation:
+
+Installation destination:   $DOT
+"
+# Show backup-path if user selected to take backup:
+if $BACKUP
+then
+  echo "Old dotfiles will be stored in    ${OLD}"
+else
+  echo "Old dotfiles will be moved to ${OLD}. This directory will be
+  deleted on next boot"
+fi
+
+
+# ================== Abort installation? =====================
+while true; do
+  read -p "\n\nDo you wish to proceed?" yn
+  case $yn in
+    [Yy]* ) break;;
+    [Nn]* ) exit;;
+    * ) echo "Please answer [y]es or [n]o.";;
+  esac
+done
+
+# ================= Installation of dotfiles: =================
+
+# Download the repo to $DOT
 echo "Downloading the dotfiles-repository to $DOT"
 git clone git@github.com:leiklier/dotfiles.git $DOT
 cd $DOT
 git submodule update --init # Pull all submodules
 
-# Back up old dotfiles to ~/dotfiles.old
-OLD=~/dotfiles.old
+#=======================  Back up old dotfiles to $OLD ==============================
 echo "Backing up all old dotfiles to $OLD and symlinking new dotfiles to home-directory"
 cd ~
 mkdir $OLD
@@ -86,6 +171,6 @@ vim +PluginInstall +qall
 # Finished! Inform user:
 echo "SUCCESS!\n"
 echo "Leik Lima-Eriksen's dotfile-repo has been successfully installed in your home-directory\n"
-echo "Your old dotfiles have been moved to ~/dotfiles.old. You may delete this directory at any time\n"
+echo "Your old dotfiles have been moved to ${OLD}. You may delete this directory at any time\n"
 echo "To update, run\ncd ~/dotfiles && git pull origin"
 
