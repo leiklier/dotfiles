@@ -79,6 +79,10 @@ mv .spacemacs $OLD
 ln -s ${DOT}/emacs.d .emacs.d
 ln -s ${DOT}/spacemacs .spacemacs
 
+
+# =============== Install plugins with vundle: =======
+vim +PluginInstall +qall
+
 # Finished! Inform user:
 echo "SUCCESS!\n"
 echo "Leik Lima-Eriksen's dotfile-repo has been successfully installed in your home-directory\n"
