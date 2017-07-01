@@ -117,11 +117,11 @@ if ! shopt -oq posix; then
 fi
 
 # added by Anaconda3 4.4.0 installer
-export PATH="/home/leiklier/anaconda3/bin:$PATH"
+export PATH="${HOME}/anaconda3/bin:$PATH"
 #!/usr/bin/env bash
 
 # Path to the bash it configuration
-export BASH_IT="/home/leiklier/.bash_it"
+export BASH_IT="${HOME}/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
