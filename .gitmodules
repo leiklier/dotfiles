@@ -17,3 +17,6 @@
 [submodule "vim/bundle/vundle"]
 	path = vim/bundle/vundle
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "bash/bash_it"]
+	path = bash/bash_it
+	url = https://github.com/Bash-it/bash-it.git
