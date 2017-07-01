@@ -15,7 +15,6 @@ vim/sessions
 bin/subl
 tags
 tmp
-bak/**/*
-
+bak
 
 !bak/README.md
