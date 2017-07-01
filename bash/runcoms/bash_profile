@@ -1,1 +1,6 @@
 
+
+
+# macOS starts bash as login script, and does therefore not automatically
+# source ~/.bashrc. Therefore, let this be the last lines of the file:
+source ~/.bashrc
