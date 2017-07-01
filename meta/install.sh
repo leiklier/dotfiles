@@ -177,7 +177,11 @@ ln -s ${DOT}/spacemacs .spacemacs
 # =============== Install plugins with vundle: =======
 vim +PluginInstall +qall
 
-# Finished! Inform user:
+# Compile YouCompleteMe with all targets:
+cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
+
+# ==================== Finished! ======================
+# Inform user:
 echo "SUCCESS!\n"
 echo "Leik Lima-Eriksen's dotfile-repo has been successfully installed in your home-directory\n"
 echo "Your old dotfiles have been moved to ${OLD}. You may delete this directory at any time\n"
