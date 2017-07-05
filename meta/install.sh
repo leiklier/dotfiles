@@ -138,10 +138,12 @@ ln -s ${DOT}/zshrc .zshrc
 # =============== git =================
 # Backup:
 mv .gitconfig $OLD
+mv .gitconfig.local $OLD
 mv .gitignore $OLD
 
 # Link new dotfiles:
 ln -s ${DOT}/git/gitconfig .gitconfig
+ln -s ${DOT}/git/gitconfig.local .gitconfig.local
 ln -s ${DOT}/git/gitignore .gitignore
 
 # ============== tmux =================

@@ -124,7 +124,7 @@
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
 [include]
-  path = .gitconfig.user
+  path = ~/.gitconfig.local
 [user]
   name = Leik Lima-Eriksen
   email = leik.lima-eriksen@lyse.net
