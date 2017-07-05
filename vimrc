@@ -1,42 +1,21 @@
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+" [This file is symlinked to ~/.vimrc]
 
-" TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
-" source ~/.vimrc.before if it exists.
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
+" ====================  META  ====================
 
-" ================ General Config ====================
+set nocompatible                  " Use Vim settings, rather than Vi settings (much better!).
+                                  " This must be first, because it changes
+                                  " other settings as a side effect
+set exrc                          " Force sourcing of .vimrc in working directory
+let mapleader=","                   " Change leader to a comma because the backslash is
+                                    " too far away. That means all \x commands
+                                    " turn into ,x. The mapleader has to be
+                                    " set before vundle starts loading all the
+                                    " plugins.
 
-set exrc                            "Force sourcing of .vimrc in working directory
-set number                          "Line numbers are good
-set backspace=indent,eol,start      "Allow backspace in insert mode
-set history=1000                    "Store lots of :cmdline history
-set showcmd                         "Show incomplete cmds down the bottom
-set showmode                        "Show current mode down the bottom
-set gcr=a:blinkon0                  "Disable cursor blink
-set visualbell                      "No sounds
-set autoread                        "Reload files changed outside vim
-set mouse=a                         "Enable mouse point-and-click in vim
-let g:NERDTreeMouseMode=3           " Enable mouse click in NERDTree
-set cursorline                      "Highlight cursorline
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
+set showmode                      " Show current mode down the bottom
+set visualbell                    " No sounds
 
-"turn on syntax highlighting
-syntax on
-
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
-let mapleader=","
-
-" =============== Vundle Initialization ===============
+" -----------  Vundle Initialization  -----------
 " This loads all the plugins specified in ~/.vim/vundles.vim
 " Use Vundle plugin to manage all other plugins
 if filereadable(expand("~/.vim/vundles.vim"))
@@ -44,16 +23,54 @@ if filereadable(expand("~/.vim/vundles.vim"))
 endif
 au BufNewFile,BufRead *.vundle set filetype=vim
 
-" ========== Add FuZzyFinder to &runtimepath ========
-set rtp+=/usr/local/opt/fzf
 
-" ================ Turn Off Swap Files ==============
+" ===================  COMMANDS  ==================
+set history=1000                    " Store lots of :cmdline history
+set showcmd                         " Show incomplete cmds down the bottom
 
+
+" ==================  NAVIGATION  ================
+
+" --------------------  Mouse  --------------------
+set mouse=a                         " Enable mouse point-and-click in vim
+let g:NERDTreeMouseMode=3           " Enable mouse click in NERDTree
+" Scrolling
+set scrolloff=8                     " Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+
+" -------------------  Cursor  --------------------
+set gcr=a:blinkon0                  " Disable cursor blink
+set cursorline                      " Highlight cursorline
+
+" -------------------  Search  --------------------
+set incsearch                       " Find the next match as we type the search
+set hlsearch                        " Highlight searches by default
+set ignorecase                      " Ignore case when searching...
+set smartcase                       " ...unless we type a capital
+
+
+" -------------------  Folds  ---------------------
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+
+" ==========  FILES & TEXT MANIPULATION  ===========
+set autoread                        " Reload files changed outside vim
+set hidden                          " This makes vim act like all other editors;
+                                    " buffers can exist in the background
+                                    " without being in a window
+                                    " http://items.sjbach.com/319/configuring-vim-right
+set backspace=indent,eol,start      " Allow backspace in insert mode
+
+" ------------  Turn Off Swap Files  --------------
 set noswapfile
 set nobackup
 set nowb
 
-" ================ Persistent Undo ==================
+" --------------  Persistent Undo  ----------------
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
 if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
@@ -62,15 +79,36 @@ if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
   set undofile
 endif
 
-" ================ Indentation ======================
+" ------------------  Clipboard  ------------------
+set clipboard=unnamedplus           " Use system clipboard
 
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
+" ====================  LINES  ====================
+
+" Enable a hybrid of relative line numbering and absolute line numbering
+set relativenumber
+set number
+
+" ----------------  Indentation  ----------------
+set autoindent                      " Automatically indent text
+set smartindent                     " Does the right thing (mostly)
+                                    " in programs
+set smarttab                        " Use tabs for indentation and
+                                    " spaces for alignment
+set shiftwidth=2                    " Indenting is 2 spaces
+set softtabstop=-1                  " Width of softtabs (-1 => same as tabstop)
+set tabstop=2                       " Tab characters [\t] appear 2 spaces wide
+set expandtab                       " Don't use actual tab character
+set cindent                         " Stricter rules for C programs
+
+" Map [shift] + [tab] to "backtab" (de-indent)
+" Command mode:
+nnoremap <S-Tab> <<
+" Insert mode: [TODO: DOES NOT CURRENTLY WORK!]
+inoremap <S-Tab> <C-d>
+" Tab and backtab in visual-mode:
+vnoremap <Tab> >>
+vnoremap <S-Tab> <<
+
 
 " Auto indent pasted text
 nnoremap p p=`]<C-o>
@@ -82,48 +120,12 @@ filetype indent on
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-set nowrap       "Don't wrap lines
-set linebreak    "Wrap lines at convenient points
+set nowrap                          "Don't wrap lines
+set linebreak                       "Wrap lines at convenient points
 
-" =================== Lines =========================
-" Enable a hybrid of relative line numbering and absolute line numbering:
-set relativenumber
-set number
+" =====================  SYNTAX  ===================
+syntax on                           " Turn on syntax highlighting
 
-" ================ Folds ============================
 
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-
-" ================ Completion =======================
-
-set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-set wildignore+=*vim/backups*
-set wildignore+=*sass-cache*
-set wildignore+=*DS_Store*
-set wildignore+=vendor/rails/**
-set wildignore+=vendor/cache/**
-set wildignore+=*.gem
-set wildignore+=log/**
-set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
-
-"
-" ================ Scrolling ========================
-
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
-set sidescrolloff=15
-set sidescroll=1
-
-" ================ Search ===========================
-
-set incsearch       " Find the next match as we type the search
-set hlsearch        " Highlight searches by default
-set ignorecase      " Ignore case when searching...
-set smartcase       " ...unless we type a capital
-
-" ================ Custom Settings ========================
+" ================  CUSTOM SETTINGS ================
 so ~/dotfiles/vim/settings.vim
