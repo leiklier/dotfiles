@@ -17,5 +17,7 @@ tags
 tmp
 bak
 
+**/_gitignore
+
 !bak/README.md
 !tmp/README.md
