@@ -2,18 +2,19 @@
 
 " ====================  META  ====================
 
-set nocompatible                  " Use Vim settings, rather than Vi settings (much better!).
-                                  " This must be first, because it changes
-                                  " other settings as a side effect
-set exrc                          " Force sourcing of .vimrc in working directory
+set nocompatible                    " Use Vim settings, rather than Vi settings (much better!).
+                                    " This must be first, because it changes
+                                    " other settings as a side effect
+set lazyredraw                      " Speed up vim
+set exrc                            " Force sourcing of .vimrc in working directory
 let mapleader=","                   " Change leader to a comma because the backslash is
                                     " too far away. That means all \x commands
                                     " turn into ,x. The mapleader has to be
                                     " set before vundle starts loading all the
                                     " plugins.
 
-set showmode                      " Show current mode down the bottom
-set visualbell                    " No sounds
+set showmode                        " Show current mode down the bottom
+set visualbell                      " No sounds
 
 " -----------  Vundle Initialization  -----------
 " This loads all the plugins specified in ~/.vim/vundles.vim
@@ -52,9 +53,9 @@ set smartcase                       " ...unless we type a capital
 
 
 " -------------------  Folds  ---------------------
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
+set foldmethod=indent               "fold based on indent
+set foldnestmax=3                   "deepest fold is 3 levels
+set nofoldenable                    "dont fold by default
 
 
 " ==========  FILES & TEXT MANIPULATION  ===========
@@ -65,19 +66,17 @@ set hidden                          " This makes vim act like all other editors;
                                     " http://items.sjbach.com/319/configuring-vim-right
 set backspace=indent,eol,start      " Allow backspace in insert mode
 
-" ------------  Turn Off Swap Files  --------------
-set noswapfile
-set nobackup
-set nowb
+" ------------------  Swap Files  -------------------
+set directory=~/.vim/.swap//        " Directory in which to store swap-files
 
-" --------------  Persistent Undo  ----------------
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
-"if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
-""  silent !mkdir ~/.vim/backups > /dev/null 2>&1
-""  set undodir=~/.vim/backups
-""  set undofile
-"endif
+" -------------------  Backups  --------------------
+set backupdir=~/.vim/.backup//      " Directory in which to store backups
+
+" --------------------  Undo  ----------------------
+set undofile                        " Save undos after file closes
+set undodir=~/.vim/.undo//          " Directory in which to save history
+set undolevels=1000                 " Max number of undos to store
+set undoreload=10000                " Max number of lines in undo-file
 
 " ------------------  Clipboard  ------------------
 set clipboard=unnamedplus           " Use system clipboard
