@@ -27,14 +27,17 @@ au BufNewFile,BufRead *.vundle set filetype=vim
 
 " ===================  COMMANDS  ==================
 set history=1000                    " Store lots of :cmdline history
+set wildmenu                        " Show command-suggestions when pressing [tab]
+set wildmode=full                   " When showing command-suggestions; show all matching
+                                    " commands
 set showcmd                         " Show incomplete cmds down the bottom
-
 
 " ==================  NAVIGATION  ================
 
 " --------------------  Mouse  --------------------
 set mouse=a                         " Enable mouse point-and-click in vim
 let g:NERDTreeMouseMode=3           " Enable mouse click in NERDTree
+
 " Scrolling
 set scrolloff=8                     " Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
