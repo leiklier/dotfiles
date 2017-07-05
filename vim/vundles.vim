@@ -15,7 +15,7 @@ set rtp+=~/.vim/vundles/ "Submodules
 call vundle#rc()
 
 " let Vundle manage Vundle (required)
-Bundle "gmarik/vundle"
+Plugin 'VundleVim/Vundle.vim'
 
 " dotfiles' vundles are split up by category into smaller files
 " This reduces churn and makes it easier to fork. See

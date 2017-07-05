@@ -83,7 +83,7 @@ function! OpenNerdTree()
     NERDTreeToggle
   endif
 endfunction
-nnoremap <silent> <C-\> :call OpenNerdTree()<CR>
+nnoremap <silent> <leader>nt :call OpenNerdTree()<CR>
 
 " ,q to toggle quickfix window (where you have stuff like Ag)
 " ,oq to open it back up (rare)
