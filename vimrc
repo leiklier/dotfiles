@@ -1,6 +1,6 @@
 " [This file is symlinked to ~/.vimrc]
 
-" ====================  META  ====================
+" ==============  META & GENERAL  =================
 
 set nocompatible                    " Use Vim settings, rather than Vi settings (much better!).
                                     " This must be first, because it changes
@@ -14,7 +14,23 @@ let mapleader=","                   " Change leader to a comma because the backs
                                     " plugins.
 
 set showmode                        " Show current mode down the bottom
-set visualbell                      " No sounds
+
+" get Vim to reload ~/.vimrc file whenever it changes
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
+
+"No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" Properly disable sound on errors on MacVim
+if has("gui_macvim")
+    autocmd GUIEnter * set vb t_vb=
+endif
 
 " -----------  Vundle Initialization  -----------
 " This loads all the plugins specified in ~/.vim/vundles.vim
@@ -25,12 +41,33 @@ endif
 au BufNewFile,BufRead *.vundle set filetype=vim
 
 
-" ===================  COMMANDS  ==================
+" ============  STATUS LINE & COMMANDS  ===========
 set history=1000                    " Store lots of :cmdline history
 set wildmenu                        " Show command-suggestions when pressing [tab]
 set wildmode=full                   " When showing command-suggestions; show all matching
                                     " commands
 set showcmd                         " Show incomplete cmds down the bottom
+
+" Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
+" ================  FONTS & ENCODING =============
+" Set font according to system
+if has("mac") || has("macunix")
+    set gfn=Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
+elseif has("win16") || has("win32")
+    set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
+elseif has("gui_gtk2")
+    set gfn=Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+elseif has("linux")
+    set gfn=Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
+elseif has("unix")
+    set gfn=Monospace\ 11
+endif
+
+" Set utf8 as standard encoding
+set encoding=utf8
+
 
 " ==================  NAVIGATION  ================
 
@@ -74,6 +111,7 @@ set hidden                          " This makes vim act like all other editors;
                                     " without being in a window
                                     " http://items.sjbach.com/319/configuring-vim-right
 set backspace=indent,eol,start      " Allow backspace in insert mode
+set whichwrap+=<,>,h,l              " =================== || ========================
 
 " ------------------  Swap Files  -------------------
 set directory=~/.vim/.swap//        " Directory in which to store swap-files
@@ -100,6 +138,9 @@ set number
 " As default, do not wrap words (annoying when writing code):
 set nowrap                          " Don't wrap lines
 set linebreak                       " Wrap lines at convenient points
+
+" Add a bit extra margin to the left
+set foldcolumn=1
 
 " Wrap lines correctly when editing text:
 au BufRead,BufNewFile *.txt,*.tex set wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions-=t
