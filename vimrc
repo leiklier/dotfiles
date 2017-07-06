@@ -48,6 +48,12 @@ set sidescroll=1
 set gcr=a:blinkon0                  " Disable cursor blink
 set cursorline                      " Highlight cursorline
 
+" Jump to last known cursor position when reopening a file
+"         ( Position is saved to ~/.viminfo )
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
+
 " -------------------  Search  --------------------
 set incsearch                       " Find the next match as we type the search
 set hlsearch                        " Highlight searches by default
