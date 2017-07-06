@@ -90,15 +90,22 @@ set clipboard=unnamedplus           " Use system clipboard
 set relativenumber
 set number
 
-" Word wrap without line breaks
-set wrap                            " Word wrap visually (do not change text in buffer)
-set linebreak                       " Only wrap at a character in the breakat option
-set nolist                          " List disables linebreak
-set textwidth=0                     " Prevent Vim from automatically inserting line breaks
-                                    " in newly inserted text.
-set wrapmargin=0                    " ====================== || ===========================
-set formatoptions-=t                " Prevent Vim from automatically reformat when typing on
-                                    " existing lines.
+" ----------------  Word wrapping  ----------------
+" As default, do not wrap words (annoying when writing code):
+set nowrap                          " Don't wrap lines
+set linebreak                       " Wrap lines at convenient points
+
+" Wrap lines correctly when editing text:
+au BufRead,BufNewFile *.txt,*.tex set wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions-=t
+" => [EXPLANATION]
+"set wrap                            " Word wrap visually (do not change text in buffer)
+"set linebreak                       " Only wrap at a character in the breakat option
+"set nolist                          " List disables linebreak
+"set textwidth=0                     " Prevent Vim from automatically inserting line breaks
+"                                    " in newly inserted text.
+"set wrapmargin=0                    " ====================== || ===========================
+"set formatoptions-=t                " Prevent Vim from automatically reformat when typing on
+"                                    " existing lines.
 
 " ----------------  Indentation  ----------------
 set autoindent                      " Automatically indent text
