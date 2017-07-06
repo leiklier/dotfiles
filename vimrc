@@ -5,7 +5,7 @@
 set nocompatible                    " Use Vim settings, rather than Vi settings (much better!).
                                     " This must be first, because it changes
                                     " other settings as a side effect
-set lazyredraw                      " Speed up vim
+set lazyredraw                      " Don't redraw while executing macros (good performace config)
 set exrc                            " Force sourcing of .vimrc in working directory
 let mapleader=","                   " Change leader to a comma because the backslash is
                                     " too far away. That means all \x commands
@@ -90,6 +90,16 @@ set clipboard=unnamedplus           " Use system clipboard
 set relativenumber
 set number
 
+" Word wrap without line breaks
+set wrap                            " Word wrap visually (do not change text in buffer)
+set linebreak                       " Only wrap at a character in the breakat option
+set nolist                          " List disables linebreak
+set textwidth=0                     " Prevent Vim from automatically inserting line breaks
+                                    " in newly inserted text.
+set wrapmargin=0                    " ====================== || ===========================
+set formatoptions-=t                " Prevent Vim from automatically reformat when typing on
+                                    " existing lines.
+
 " ----------------  Indentation  ----------------
 set autoindent                      " Automatically indent text
 set smartindent                     " Does the right thing (mostly)
@@ -121,9 +131,6 @@ filetype indent on
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
-
-set nowrap                          "Don't wrap lines
-set linebreak                       "Wrap lines at convenient points
 
 " =====================  SYNTAX  ===================
 syntax on                           " Turn on syntax highlighting
