@@ -186,6 +186,17 @@ mv .spacemacs $OLD
 ln -s ${DOT}/emacs.d .emacs.d
 ln -s ${DOT}/spacemacs .spacemacs
 
+# ======= misc command-line-tools ========
+# ----------------- fzf ------------------
+# Backup:
+mv .fzf $OLD
+
+# Link new dotfiles:
+ln -s ${DOT}/misc/fzf .fzf
+
+# Install:
+echo "Please answer <y> two the first two questions, and then finish by pressing <n> on the rest"
+bash .fzf/install
 
 # =============== Install plugins with vundle: =======
 vim +PluginInstall +qall
