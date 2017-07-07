@@ -140,3 +140,5 @@ autoload -U compinit && compinit
 
 # Additional customization (Categorized)
 for config_file ($HOME/dotfiles/zsh/runcoms/interactive/*.zsh) source $config_file
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
