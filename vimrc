@@ -37,6 +37,7 @@ au BufNewFile,BufRead *.vundle set filetype=vim
 
 
 " ============  STATUS LINE & COMMANDS  ===========
+set shell=bash\ -i                  " Set interactive bash as the default Vim shell
 set history=1000                    " Store lots of :cmdline history
 set wildmenu                        " Show command-suggestions when pressing [tab]
 set wildmode=full                   " When showing command-suggestions; show all matching
@@ -134,11 +135,8 @@ set number
 set nowrap                          " Don't wrap lines
 set linebreak                       " Wrap lines at convenient points
 
-" Add a bit extra margin to the left
-set foldcolumn=1
-
 " Wrap lines correctly when editing text:
-au BufRead,BufNewFile *.txt,*.tex,*.html set wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions-=t
+au BufRead,BufNewFile *.txt,*.tex,*.md,*.markdown,*.html set wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions-=t
 " => [EXPLANATION]
 "set wrap                            " Word wrap visually (do not change text in buffer)
 "set linebreak                       " Only wrap at a character in the breakat option
