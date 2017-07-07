@@ -8,7 +8,7 @@ export GPG_TTY=$(tty)
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$HOME/bin:/usr/local/bin:/home/leiklier/anaconda3/bin:/opt/metasploit-framework/bin:/Library/TeX/texbin:$PATH
 
-# Include "dot-*"-commands in $PATH: 
+# Include "dot-*"-commands in $PATH:
 export PATH=$HOME/dotfiles/bin:$HOME/dotfiles/bin/dot:$PATH
 
 # Import ~/.bashrc and ~/.profile
@@ -32,7 +32,7 @@ export ZSH=~/.oh-my-zsh
 # ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # CURRENT:
-ZSH_THEME="agnoster"
+ZSH_THEME="" # Disabled in order to use Pure theme
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"

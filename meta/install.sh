@@ -98,6 +98,13 @@ echo "Backing up all old dotfiles to $OLD and symlinking new dotfiles to home-di
 cd ~
 mkdir $OLD
 
+# ================ Sh ===============
+# Backup:
+mv .profile $OLD
+
+# Link new dotfiles:
+ln -s ${DOT}/sh/runcoms/profile .profile
+
 # =============== Bash ==============
 # Backup:
 mv .bash_it $OLD
@@ -119,6 +126,7 @@ ln -s ${DOT}/bashrc .bashrc
 # =============== Zsh ===============
 # Backup:
 mv .oh-my-zsh $OLD
+mv .zfunctions $OLD
 
 mv .zlogin $OLD
 mv .zlogout $OLD
@@ -129,6 +137,7 @@ mv .zshrc $OLD
 # Link new dotfiles:
 ln -s ${DOT}/zsh/oh-my-zsh .oh-my-zsh
 
+ln -s ${DOT}/zsh/runcoms/zfunctions .zfunctions
 ln -s ${DOT}/zsh/runcoms/zlogin .zlogin
 ln -s ${DOT}/zsh/runcoms/zlogout .zlogout
 ln -s ${DOT}/zsh/runcoms/zprofile .zprofile

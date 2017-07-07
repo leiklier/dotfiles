@@ -20,3 +20,6 @@
 [submodule "bash/bash_it"]
 	path = bash/bash_it
 	url = https://github.com/Bash-it/bash-it.git
+[submodule "zsh/custom-modules/themes/pure"]
+	path = zsh/custom-modules/themes/pure
+	url = https://github.com/sindresorhus/pure.git
