@@ -6,6 +6,7 @@ set nocompatible                    " Use Vim settings, rather than Vi settings 
                                     " This must be first, because it changes
                                     " other settings as a side effect
 set lazyredraw                      " Don't redraw while executing macros (good performace config)
+set ttyfast                         " Quicker scrolling (less or no lag)
 set exrc                            " Force sourcing of .vimrc in working directory
 let mapleader=","                   " Change leader to a comma because the backslash is
                                     " too far away. That means all \x commands
@@ -14,12 +15,6 @@ let mapleader=","                   " Change leader to a comma because the backs
                                     " plugins.
 
 set showmode                        " Show current mode down the bottom
-
-" get Vim to reload ~/.vimrc file whenever it changes
-augroup reload_vimrc " {
-    autocmd!
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
 
 "No annoying sound on errors
 set noerrorbells
@@ -143,7 +138,7 @@ set linebreak                       " Wrap lines at convenient points
 set foldcolumn=1
 
 " Wrap lines correctly when editing text:
-au BufRead,BufNewFile *.txt,*.tex set wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions-=t
+au BufRead,BufNewFile *.txt,*.tex,*.html set wrap linebreak nolist textwidth=0 wrapmargin=0 formatoptions-=t
 " => [EXPLANATION]
 "set wrap                            " Word wrap visually (do not change text in buffer)
 "set linebreak                       " Only wrap at a character in the breakat option
