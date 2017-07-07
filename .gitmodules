@@ -23,3 +23,6 @@
 [submodule "zsh/zsh_custom/themes/pure"]
 	path = zsh/zsh_custom/themes/pure
 	url = https://github.com/sindresorhus/pure.git
+[submodule "zsh/zsh_custom/plugins/zsh-syntax-highlighting"]
+	path = zsh/zsh_custom/plugins/zsh-syntax-highlighting
+	url = git://github.com/zsh-users/zsh-syntax-highlighting.git

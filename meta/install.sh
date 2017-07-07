@@ -126,6 +126,7 @@ ln -s ${DOT}/bashrc .bashrc
 # =============== Zsh ===============
 # Backup:
 mv .oh-my-zsh $OLD
+mv .zsh_custom $OLD
 mv .zfunctions $OLD
 
 mv .zlogin $OLD
@@ -136,8 +137,9 @@ mv .zshrc $OLD
 
 # Link new dotfiles:
 ln -s ${DOT}/zsh/oh-my-zsh .oh-my-zsh
-
+ln -s ${DOT}/zsh/zsh_custom .zsh_custom
 ln -s ${DOT}/zsh/runcoms/zfunctions .zfunctions
+
 ln -s ${DOT}/zsh/runcoms/zlogin .zlogin
 ln -s ${DOT}/zsh/runcoms/zlogout .zlogout
 ln -s ${DOT}/zsh/runcoms/zprofile .zprofile
