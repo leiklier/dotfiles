@@ -1,0 +1,6 @@
+" The purpose of this file is to list plugins that should be loaded before all
+" the other plugins are loaded.
+
+" Miscellaneous auto-load Vim scripts
+" Contains Vim scripts that are used by many other Vim plugins
+Bundle "xolox/vim-misc"

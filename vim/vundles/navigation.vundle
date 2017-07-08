@@ -17,6 +17,11 @@ Bundle "tiagofumo/vim-nerdtree-syntax-highlight.git"
 " Extension that shows git status flags in explorer
 Bundle "Xuyuanp/nerdtree-git-plugin"
 
+" -------------------- File finder - CtrlP --------------------------
+"  DESCRIPTION:
+"  Full path fuzzy file, buffer, mru, tag, ... finder for VIm
+
+Bundle "ctrlpvim/ctrlp.vim"
 
 " --------------- Class outline viewer - Tagbar ---------------------
 "  DESCRIPTION:

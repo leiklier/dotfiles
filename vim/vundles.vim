@@ -20,17 +20,15 @@ Plugin 'VundleVim/Vundle.vim'
 " dotfiles' vundles are split up by category into smaller files
 " This reduces churn and makes it easier to fork. See
 " ~/.vim/vundles/ to edit them:
+runtime first_loaded.vundle             " Plugins that should be loaded before all other plugins
 runtime textmanipulation.vundle         " Plugins that makes manipulating text easier
 runtime navigation.vundle               " Plugins that makes navigating files and text easier
-runtime ruby.vundle
 runtime languages.vundle
 runtime git.vundle
 runtime appearance.vundle
 runtime textobjects.vundle
-runtime search.vundle
-runtime project.vundle
 runtime vim-improvements.vundle
-runtime lastloaded.vundle               " Plugins that should be loaded after all other plugins
+runtime last_loaded.vundle              " Plugins that should be loaded after all other plugins
 
 " The plugins listed in ~/.vim/.vundles.local will be added here to
 " allow the user to add vim plugins to dotfiles without the need for a fork.
