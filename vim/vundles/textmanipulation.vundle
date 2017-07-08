@@ -1,0 +1,17 @@
+" Purpose of file:
+"
+" List plugins that eases textmanipulation in Vim,
+" eg. in terms of providen autocompletion, etc.
+
+" ==================== GLOBAL ===================
+" Language-aware code completion engine
+Plugin 'Valloric/YouCompleteMe'
+
+" Support for textual snippets, similar to TextMate
+Plugin 'garbas/vim-snipmate.git'        " The plugin
+Plugin 'honza/vim-snippets'             " Some snippets
+" Dependencies for snipmate:
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+
+" ============= LANGUAGE-SPECIFIC ===============

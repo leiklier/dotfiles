@@ -1,4 +1,12 @@
+
+" Git repository viewer similar to gitk
 Bundle "gregsexton/gitv"
+
+" Vimscript for creating gists
 Bundle "mattn/gist-vim"
+
+" Git wrapper with commands for interacting with git
 Bundle "tpope/vim-fugitive"
-Bundle "tpope/vim-git"
+
+" Shows a git diff in the 'gutter' (sign coloumn)
+Bundle "airblade/vim-gitgutter"

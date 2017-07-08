@@ -1,10 +1,27 @@
-Bundle "chrisbra/color_highlight.git"
+" Purpose of the file:
+"
+" The purpose of this file is to list plugins that improve the visual
+" appearance of Vim and extends the UX by adding visual elements to the edito
+" of this file is to list plugins that improve the visual appearance of thVim
+" and extends the UX by adding visual elements to the editorr
+
+" More fancy start screen
+Bundle "mhinz/vim-startify"
+
+" Visually and functionally improved status-/tabline
+Bundle "vim-airline/vim-airline"
+Bundle "vim-airline/vim-airline-themes"
+
+" Add filetype glyphs to other plugins such as NERDTree, vim-airline, etc.
+" Bundle "ryanoasis/vim-devicons"               NB: LOADS in "lastloaded.vim"
+
+" Highlight color keywords, such as #d13632 and rgb(209, 210, 44)
+Bundle "ap/vim-css-color"
+
 Bundle "skwp/vim-colors-solarized"
-Bundle "itchyny/lightline.vim"
 Bundle "jby/tmux.vim.git"
 Bundle "morhetz/gruvbox"
 Bundle "xsunsmile/showmarks.git"
 Bundle "chriskempson/base16-vim"
-
 " Required for Gblame in terminal vim
-Bundle "godlygeek/csapprox.git" 
+Bundle "godlygeek/csapprox.git"

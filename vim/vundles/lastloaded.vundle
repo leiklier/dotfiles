@@ -1,0 +1,8 @@
+" Here go plugins that has to be loaded after the other plugins.
+" NB: Plugins placed here should be referenced in another *.vundle file
+" AND you should in this file write where the plugin has been referenced!
+
+
+" Customizable and extendable glyphs (icons) settings
+" (  Referenced in: appearance.vundle  )
+Bundle "ryanoasis/vim-devicons.git"

@@ -1,8 +1,14 @@
 " ========================================
 " General vim sanity improvements
 " ========================================
-"
-"
+
+" <leader>w to save file
+nmap <leader>w :w!<cr>
+
+" :W sudo saves the file
+" (useful for handling the permission-denied error)
+command W w !sudo tee % > /dev/null
+
 " alias yw to yank the entire word 'yank inner word'
 " even if the cursor is halfway inside the word
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)

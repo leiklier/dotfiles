@@ -13,14 +13,15 @@ let mapleader=","                   " Change leader to a comma because the backs
                                     " turn into ,x. The mapleader has to be
                                     " set before vundle starts loading all the
                                     " plugins.
+let g:mapleader=","                 " ---------------- || -------------------
 
+set title                           " Make xterm inherit title from filename
 set showmode                        " Show current mode down the bottom
+set ttimeoutlen=0                   " Instant switching between modes
 
 "No annoying sound on errors
 set noerrorbells
 set novisualbell
-set t_vb=
-set tm=500
 
 " Properly disable sound on errors on MacVim
 if has("gui_macvim")
@@ -44,26 +45,20 @@ set wildmode=full                   " When showing command-suggestions; show all
                                     " commands
 set showcmd                         " Show incomplete cmds down the bottom
 
+" Smart mappings on the command line
+cno $h e ~/
+cno $d e ~/Desktop/
+cno $j e ./
+cno $c e <C-\>eCurrentFileDir("e")<cr>
+
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 " ================  FONTS & ENCODING =============
-" Set font according to system
-if has("mac") || has("macunix")
-    set gfn=Hack:h14,Source\ Code\ Pro:h15,Menlo:h15
-elseif has("win16") || has("win32")
-    set gfn=Hack:h14,Source\ Code\ Pro:h12,Bitstream\ Vera\ Sans\ Mono:h11
-elseif has("gui_gtk2")
-    set gfn=Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
-elseif has("linux")
-    set gfn=Hack\ 14,Source\ Code\ Pro\ 12,Bitstream\ Vera\ Sans\ Mono\ 11
-elseif has("unix")
-    set gfn=Monospace\ 11
-endif
-
 " Set utf8 as standard encoding
 set encoding=utf8
-
+" Support for vim-devicons and other icons
+set guifont=Sauce\ Code\ Pro\ Medium\ Nerd\ Font\ Complete:h13
 
 " ==================  NAVIGATION  ================
 
@@ -80,6 +75,10 @@ set sidescroll=1
 " -------------------  Cursor  --------------------
 set gcr=a:blinkon0                  " Disable cursor blink
 set cursorline                      " Highlight cursorline
+
+" Don't move the cursor when leaving insert mode
+" (WARNING: This may cause certain vundles to misbehave)
+au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
 
 " Jump to last known cursor position when reopening a file
 "         ( Position is saved to ~/.viminfo )

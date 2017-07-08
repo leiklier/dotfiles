@@ -1,0 +1,32 @@
+" Purpose of file:
+"
+" The purpose of this file is to list plugins that eases file-navigation in Vim,
+" both in terms of navigation in the file tree and within files themselves.
+
+" ------------------ File explorer - NERDTree ---------------------
+" The file explorer itself
+Bundle "scrooloose/nerdtree.git"
+
+" Extension that makes NERDTree feel like a true panel,
+" independent of tabs
+Bundle "jistr/vim-nerdtree-tabs.git"
+
+" Extension that adds colors and icons to listings
+Bundle "tiagofumo/vim-nerdtree-syntax-highlight.git"
+
+" Extension that shows git status flags in explorer
+Bundle "Xuyuanp/nerdtree-git-plugin"
+
+
+" --------------- Class outline viewer - Tagbar ---------------------
+"  DESCRIPTION:
+"  Tagbar is a Vim plugin that provides an easy way to browse the
+"  tags of the current file and get an overview of its structure.
+"  It does this by creating a sidebar that displays the ctags-generated
+"  tags of the current file, ordered by their scope. This means that for
+"  example methods in C++ are displayed under the class they are defined in.
+
+" NB: Currently disabled because it causes vim to throw "tty suspended" error
+" when launching vim
+
+"Bundle "majutsushi/tagbar"
