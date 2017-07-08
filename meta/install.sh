@@ -197,7 +197,8 @@ ln -s ${DOT}/misc/fzf .fzf
 # Install:
 echo "Please answer <y> two the first two questions, and then finish by pressing <n> on the rest"
 bash .fzf/install
-
+# ================= Nerd-fonts =================
+cd ${DOT}/fonts/nerd-fonts && ./install.sh
 # =============== Install plugins with vundle: =======
 vim +PluginInstall +qall
 

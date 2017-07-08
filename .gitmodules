@@ -29,3 +29,6 @@
 [submodule "misc/fzf"]
 	path = misc/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "fonts/nerd-fonts"]
+	path = fonts/nerd-fonts
+	url = https://github.com/ryanoasis/nerd-fonts.git
