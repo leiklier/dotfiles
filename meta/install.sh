@@ -161,10 +161,12 @@ ln -s ${DOT}/git/gitignore .gitignore
 # Backup:
 mv .tmux $OLD
 mv .tmux.conf $OLD
+mv .tmux.conf.custom $OLD
 
 # Link new dotfiles:
 ln -s ${DOT}/tmux .tmux
 ln -s ${DOT}/tmux.conf .tmux.conf
+ln -s ${DOT}/tmux.conf.custom .tmux.conf.custom
 
 # ============== vim ===================
 # Backup:
