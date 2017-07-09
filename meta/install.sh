@@ -201,6 +201,10 @@ echo "Please answer <y> two the first two questions, and then finish by pressing
 bash .fzf/install
 # ================= Nerd-fonts =================
 cd ${DOT}/fonts/nerd-fonts && ./install.sh
+
+# =================== base16 ==================
+ln -s ${DOT}/config/base16-shell .config/base16-shell
+
 # =============== Install plugins with vundle: =======
 vim +PluginInstall +qall
 
