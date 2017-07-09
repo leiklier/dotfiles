@@ -169,8 +169,9 @@ set tabstop=2                       " Tab characters [\t] appear 2 spaces wide
 set expandtab                       " Don't use actual tab character
 set cindent                         " Stricter rules for C programs
 
-" Map [shift] + [tab] to "backtab" (de-indent)
+" Map <Tab> to indent and <Shift> + <Tab> to de-indent
 " Command mode:
+nnoremap <Tab> >>
 nnoremap <S-Tab> <<
 " Insert mode: [TODO: DOES NOT CURRENTLY WORK!]
 inoremap <S-Tab> <C-d>
