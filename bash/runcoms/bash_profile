@@ -1,6 +1,13 @@
-
-
+# ~/.profile is not read by bash if ~/.bash_profile or ~/.bash_login exists
+# Therefore, we force bash to source ~/.profile here:
+if [ -f "$HOME/.profile"]; then
+# source .profile if it exists
+. "$HOME/.profile"
+fi
 
 # macOS starts bash as login script, and does therefore not automatically
 # source ~/.bashrc. Therefore, let this be the last lines of the file:
-source ~/.bashrc
+if [ -f "$HOME/.bashrc" ]; then
+# source .bashrc if it exists
+. "$HOME/.bashrc"
+fi
