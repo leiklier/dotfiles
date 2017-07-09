@@ -36,6 +36,17 @@ if filereadable(expand("~/.vim/vundles.vim"))
 endif
 au BufNewFile,BufRead *.vundle set filetype=vim
 
+" =================== APPEARANCE  =================
+
+" -------------------  Themes  --------------------
+" Make vim use our base16 color scheme
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+"Also, make airline use our base16 color scheme
+let g:airline_theme='base16'
 
 " ============  STATUS LINE & COMMANDS  ===========
 set shell=bash\ -i                  " Set interactive bash as the default Vim shell
@@ -52,7 +63,7 @@ cno $j e ./
 cno $c e <C-\>eCurrentFileDir("e")<cr>
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 " ================  FONTS & ENCODING =============
 " Set utf8 as standard encoding

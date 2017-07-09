@@ -79,7 +79,7 @@ ZSH_CUSTOM=$HOME/.zsh_custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(z zsh-completions autojump git  extract  zsh-syntax-highlighting)
+plugins=(z zsh-completions autojump git  extract  zsh-syntax-highlighting base16-shell)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -142,3 +142,4 @@ autoload -U compinit && compinit
 for config_file ($HOME/dotfiles/zsh/runcoms/interactive/*.zsh) source $config_file
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
