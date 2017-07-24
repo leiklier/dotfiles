@@ -5,3 +5,7 @@
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+
+# Source file containing $DOT with path to dotfiles
+# if the file exists
+[ -f ${HOME}/.dotpath ] && . ${HOME}/.dotpath
