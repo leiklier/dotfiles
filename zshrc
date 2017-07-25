@@ -8,12 +8,6 @@ export GPG_TTY=$(tty)
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$HOME/bin:/usr/local/bin:/home/leiklier/anaconda3/bin:/opt/metasploit-framework/bin:/Library/TeX/texbin:$PATH
 
-# Include "dot-*"-commands in $PATH:
-export PATH=${DOT}/bin:${DOT}/bin/dot:$PATH
-
-# Import ~/.bashrc and ~/.profile
-[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
-
 # Path to the oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
