@@ -9,6 +9,11 @@ nmap <leader>w :w!<cr>
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
 
+" :Q maps to :qa - closes all open tabs at once
+" (annoying when forgetting to release <shift> on :q)
+command Q qa
+
+
 " alias yw to yank the entire word 'yank inner word'
 " even if the cursor is halfway inside the word
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
