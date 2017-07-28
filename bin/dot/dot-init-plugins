@@ -6,7 +6,7 @@ GitStyleBinary.command do
   short_desc "Initialize all submodules. Run this every time you pull a new dotfiles version."
 
   run do |command|
-    `cd "#{$dotfiles}" && git submodule update --init`
+    `cd "#{$DOT}" && git submodule update --init`
   end
 
 end
