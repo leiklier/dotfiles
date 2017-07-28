@@ -5,7 +5,7 @@
 
 " ==================== GLOBAL ===================
 " Language-aware code completion engine
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 " Support for textual snippets, similar to TextMate
 Plugin 'garbas/vim-snipmate.git'        " The plugin
