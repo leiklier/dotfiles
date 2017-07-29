@@ -89,7 +89,7 @@ done
 
 # Download the repo to $DOT
 echo "Downloading the dotfiles-repository to $DOT"
-git clone git@github.com:leiklier/dotfiles.git $DOT
+git clone https://github.com/leiklier/dotfiles.git $DOT
 cd $DOT
 git submodule update --init # Pull all submodules
 
