@@ -27,6 +27,10 @@ export PATH=$PATH:/usr/local/sbin:/usr/local/bin
 # User's private executables
 export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
+# Anaconda
+export PATH=$HOME/anaconda2/bin:$PATH
+
+
 # dot executables (binaries for interacting with dotfiles-repository)
 export PATH=$DOT/bin:$DOT/bin/dot:$PATH
 
