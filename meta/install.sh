@@ -209,6 +209,10 @@ cd ${DOT}/fonts/nerd-fonts && ./install.sh
 # =================== base16 ==================
 ln -s ${DOT}/config/base16-shell .config/base16-shell
 
+# ======================= HAMMERSPOON ================
+mv .hammerspoon $OLD
+ln -s ${DOT}/system/macOS/automation/hammerspoon .hammerspoon
+
 # =============== Install plugins with vundle: =======
 vim +PluginInstall +qall
 

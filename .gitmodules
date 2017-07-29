@@ -44,3 +44,6 @@
 [submodule "zsh/zsh_custom/zsh-autosuggestions"]
 	path = zsh/zsh_custom/plugins/zsh-autosuggestions
 	url = git://github.com/zsh-users/zsh-autosuggestions
+[submodule "system/macOS/automation/hammerspoon/Spoons/ControlEscape.spoon"]
+	path = system/macOS/automation/hammerspoon/Spoons/ControlEscape.spoon
+	url = git@github.com:jasonrudolph/ControlEscape.spoon.git
