@@ -1,5 +1,8 @@
 custom/zsh
 
+**/l.*
+**/.l.*
+
 vim/view
 *un~
 vim/.netrwhist
