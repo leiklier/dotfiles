@@ -119,11 +119,12 @@ set hidden                          " This makes vim act like all other editors;
 set backspace=indent,eol,start      " Allow backspace in insert mode
 set whichwrap+=<,>,h,l              " =================== || ========================
 
-" ------------------  Swap Files  -------------------
-set directory=~/.vim/.swap//        " Directory in which to store swap-files
-
-" -------------------  Backups  --------------------
-set backupdir=~/.vim/.backup//      " Directory in which to store backups
+" -------------  Swap Files & Backups  -------------
+" Disable creation of swap files & backups because
+" they are more annoying than helpful
+set noswapfile
+set nobackup
+set nowb
 
 " --------------------  Undo  ----------------------
 set undofile                        " Save undos after file closes
