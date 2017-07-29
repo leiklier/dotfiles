@@ -6,6 +6,7 @@
 # ( remote access to this computer )
 [[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
 
+
 #################################
 # ==> META OH-MY-ZSH            #
 #################################
@@ -20,6 +21,7 @@ ZSH_CUSTOM=$HOME/.zsh_custom
 # > Allow oh-my-zsh to automatically update itself without prompting
 DISABLE_UPDATE_PROMPT=true
 
+
 ################################
 # ==> APPEARANCE               #
 ################################
@@ -30,9 +32,6 @@ ZSH_THEME=""                   # Disabled in order to use the Pure theme
 # => Show WAITING DOTS whilst waiting for <tab>-completion
 COMPLETION_WAITING_DOTS="true"
 
-# => set DEFAULT_USER
-# ( This hides "user@hostname" from prompt when logged in )
-DEFAULT_USER="leiklier"
 
 ################################
 # ==> PLUGINS                  #
@@ -52,6 +51,9 @@ plugins+=(zsh-syntax-highlighting)
 plugins+=(per-directory-history)
 
 # > zsh-autosuggestions - fish-like autosuggestions based on command history
+plugins+=(zsh-autosuggestions)
+
+# > zsh-completions - additional completion definitions
 plugins+=(zsh-completions)
 
 # > z - intelligent jumping between directories
@@ -66,19 +68,20 @@ plugins+=(zsh-nvm)
 # extract - defines a function called 'extract' that extracts the archive file you pass it
 plugins+=(extract)
 
+
 ###############################
-# ==> COMPLETIONS             #
+# ==> ACTIVATE MISC SYSTEMS   #
 ###############################
 
-# TODO: Document this section
-zstyle :compinstall filename '/Users/fd0/.zshrc'
+# ==> Improved completion system
+zstyle :compinstall filename ${HOME}/.zshrc
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-autoload -Uz compinit
-compinit
-autoload -Uz bashcompinit
-bashcompinit
+autoload -Uz compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
 
-autoload -U compinit && compinit
+# ==> Prompt system
+autoload -U promptinit; promptinit
+
 
 ###############################
 # ==> ADDITIONAL CONFIG       #
