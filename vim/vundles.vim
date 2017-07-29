@@ -30,10 +30,10 @@ runtime textobjects.vundle
 runtime vim-improvements.vundle
 runtime last_loaded.vundle              " Plugins that should be loaded after all other plugins
 
-" The plugins listed in ~/.vim/.vundles.local will be added here to
-" allow the user to add vim plugins to dotfiles without the need for a fork.
-if filereadable(expand("~/dotfiles/vim/.vundles.local"))
-  source ~/dotfiles/vim/.vundles.local
+" The plugins listed in ~/.vim/l.vundles.vim will be added here to
+" allow the user to add vim plugins without the need for a fork.
+if filereadable(expand("~/.vim/l.vundles.vim"))
+  source ~/.vim/l.vundles.vim
 endif
 
 "Filetype plugin indent on is required by vundle
