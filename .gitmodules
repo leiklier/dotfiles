@@ -15,7 +15,7 @@
 	path = emacs.d
 	url = https://github.com/syl20bnr/spacemacs.git
 [submodule "vim/bundle/vundle"]
-	path = vim/bundle/vundle
+	path = vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "bash/bash_it"]
 	path = bash/bash_it
