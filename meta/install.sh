@@ -190,7 +190,7 @@ ln -s ${DOT}/spacemacs .spacemacs
 
 # ============== $DOT-constant ==========
 echo "# This file should only contain the constant \$DOT with the path to the dotfiles repo" > ${HOME}/.dotpath
-echo "DOT=${DOT}" >> ${HOME}/.dotpath
+echo "export DOT=${DOT}" >> ${HOME}/.dotpath
 
 # ======= misc command-line-tools ========
 # ----------------- fzf ------------------
