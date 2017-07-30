@@ -43,3 +43,6 @@
 [submodule "system/macOS/automation/hammerspoon/Spoons/ControlEscape.spoon"]
 	path = system/macOS/automation/hammerspoon/Spoons/ControlEscape.spoon
 	url = git@github.com:jasonrudolph/ControlEscape.spoon.git
+[submodule "vim/cli-tools/plugins-load-time"]
+	path = vim/cli-tools/plugins-load-time
+	url = git@github.com:hyiltiz/vim-plugins-profile.git
