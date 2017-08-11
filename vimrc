@@ -196,4 +196,4 @@ syntax on                           " Turn on syntax highlighting
 
 
 " ================  CUSTOM SETTINGS ================
-so ~/dotfiles/vim/settings.vim
+so ~/.vim/settings.vim
