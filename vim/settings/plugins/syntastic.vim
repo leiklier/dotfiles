@@ -11,6 +11,10 @@ let g:syntastic_quiet_messages = {'level': 'warnings'}
 " ~/.vimrc.after
 let g:syntastic_javascript_checkers = ['eslint']
 
+" Let python-mode handle python-files, and therefore deactivate
+" syntastic on such files
+let g:syntastic_ignore_files = ['\.py$']
+
 " I have no idea why this is not working, as it used to
 " be a part of syntastic code but was apparently removed
 " This will make syntastic find the correct ruby specified by mri

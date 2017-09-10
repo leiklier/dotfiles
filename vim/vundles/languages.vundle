@@ -28,6 +28,11 @@ Bundle "tpope/vim-git"
 " ----------------------------
 Plugin 'plasticboy/vim-markdown'
 
+" ----------------- Python --------------------
+" Provides static analysis, refactoring, folding,
+" completion, documentation, and more for Python
+Plugin 'python-mode/python-mode'
+
 " --------------- Javascript ------------------
 " JSX syntax highlighting and intenting
 Bundle 'mxw/vim-jsx'
