@@ -2,6 +2,9 @@
 " General vim sanity improvements
 " ========================================
 
+" Enable folding with the spacebar
+nnoremap <space> za
+
 " <leader>w to save file
 nmap <leader>w :w!<cr>
 
