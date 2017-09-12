@@ -2,6 +2,13 @@
 " General vim sanity improvements
 " ========================================
 
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
 " Enable folding with the spacebar
 nnoremap <space> za
 
@@ -184,3 +191,9 @@ map <silent> ,hp :!open -a Safari %<CR><CR>
 " :cp)
 nnoremap <silent> <C-x> :cn<CR>
 nnoremap <silent> <C-z> :cp<CR>
+
+" ============================
+" Gundo plugin
+" ============================
+" toggle gundo
+nnoremap <leader>u :GundoToggle<CR>
