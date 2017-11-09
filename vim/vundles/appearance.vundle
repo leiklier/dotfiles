@@ -26,3 +26,9 @@ Bundle "morhetz/gruvbox"
 Bundle "xsunsmile/showmarks.git"
 " Required for Gblame in terminal vim
 Bundle "godlygeek/csapprox.git"
+
+" Show space indentation visually
+Plugin 'Yggdroot/indentLine'
+
+" Show different levels of parentheses in different colors
+Plugin 'luochen1990/rainbow'

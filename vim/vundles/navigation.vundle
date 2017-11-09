@@ -35,3 +35,10 @@ Bundle "ctrlpvim/ctrlp.vim"
 " when launching vim
 
 "Bundle "majutsushi/tagbar"
+
+" -------------- Line number toggler - Numbers -----------------------
+"  DESCRIPTION:
+"  This plugin alternates between relative numbering and absolute numbering
+"  for the active window depending on the mode you are in.
+
+Bundle "myusuf3/numbers.vim"

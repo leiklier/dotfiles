@@ -26,3 +26,14 @@ Bundle "vim-scripts/sudo.vim"
 Bundle "goldfeld/ctrlr.vim"
 Bundle "editorconfig/editorconfig-vim"
 
+" Vimux - Create a small pane in tmux from vim to run single commands in
+" terminal
+Bundle "benmills/vimux"
+
+" Gnupg - Edit gpg-encrypted files without the need to decrypt first.
+" The file will be encrypted again on write
+Bundle "jamessan/vim-gnupg"
+
+
+" CoVim - Collaborative editing in vim! Google-docs like editing
+" Bundle "FredKSchott/CoVim"

@@ -10,13 +10,13 @@
 
 # DESCRIPTION:
 # $PATH is an file location related environment variable.
-# When one types a command to run, the system looks for it in the directories 
+# When one types a command to run, the system looks for it in the directories
 # specified by PATH in the order specified.
 
 # -----------
 
 # USAGE:
-# Here the $PATH should be set. Each part of it should be 
+# Here the $PATH should be set. Each part of it should be
 # described with its content/purpose
 
 # -----------
@@ -47,3 +47,13 @@ fi
 # Source file containing $DOT with path to dotfiles
 # if the file exists
 [ -f ${HOME}/.dotpath ] && . ${HOME}/.dotpath
+
+
+
+#######################################################
+# ==> VIM                                             #
+#######################################################
+
+# gnupg.vim needs this in order to correctly handle gpg-encrypted files
+GPG_TTY=`tty`
+export GPG_TTY

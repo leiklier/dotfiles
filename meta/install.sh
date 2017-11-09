@@ -219,6 +219,9 @@ vim +PluginInstall +qall
 # Compile YouCompleteMe with all targets:
 cd ~/.vim/bundle/YouCompleteMe && ./install.py --all
 
+# Python modules required for CoVim vim plugin
+pip install twisted argparse service_identity
+
 # ==================== Finished! ======================
 # Inform user:
 echo "SUCCESS!\n"

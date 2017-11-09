@@ -9,8 +9,8 @@
 " broad scale - for example by supporting a lot
 " of languages.
 
-" Syntax checking for most programming languages
-Plugin 'vim-syntastic/syntastic.git'
+" Async syntax checking for most programming languages
+Plugin 'w0rp/ale'
 
 " Syntax highlighting for most programming languages
 Plugin 'sheerun/vim-polyglot'
