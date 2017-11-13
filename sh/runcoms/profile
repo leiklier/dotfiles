@@ -57,3 +57,9 @@ fi
 # gnupg.vim needs this in order to correctly handle gpg-encrypted files
 GPG_TTY=`tty`
 export GPG_TTY
+
+#######################################################
+# ==> HOMEBREW                                        #
+#######################################################
+# Command-not-found for Homebrew (macOS only)
+if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
