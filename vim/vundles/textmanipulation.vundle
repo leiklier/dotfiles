@@ -7,11 +7,13 @@
 " Language-aware code completion engine
 Plugin 'Valloric/YouCompleteMe'
 
-" Support for textual snippets, similar to TextMate
-Plugin 'garbas/vim-snipmate.git'        " The plugin
-Plugin 'honza/vim-snippets'             " Some snippets
-" Dependencies for snipmate:
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+" Textual snippets
+" The engine
+Bundle "SirVer/ultisnips"
+" A collection of some snippets
+Bundle 'honza/vim-snippets'
+
+" Easy commenting
+Bundle "scrooloose/nerdcommenter.git"
 
 " ============= LANGUAGE-SPECIFIC ===============

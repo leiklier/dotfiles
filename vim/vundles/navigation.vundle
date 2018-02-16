@@ -42,3 +42,14 @@ Bundle "ctrlpvim/ctrlp.vim"
 "  for the active window depending on the mode you are in.
 
 Bundle "myusuf3/numbers.vim"
+
+" ---------------- Session manager - Session -------------------------
+"  DESCRIPTION:
+"  The vim-session plug-in improves upon Vim's built-in :mksession command by
+"  enabling you to easily and (if you want) automatically persist and restore your
+"  Vim editing sessions. It works by generating a Vim script that restores your current
+"  settings and the arrangement of tab pages and/or split windows and the files they contain.
+
+Bundle "xolox/vim-session"
+
+

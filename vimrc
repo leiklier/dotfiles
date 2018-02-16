@@ -14,6 +14,7 @@ let mapleader=","                   " Change leader to a comma because the backs
                                     " set before vundle starts loading all the
                                     " plugins.
 let g:mapleader=","                 " ---------------- || -------------------
+let g:maplocalleader="-"
 
 set title                           " Make xterm inherit title from filename
 set showmode                        " Show current mode down the bottom
