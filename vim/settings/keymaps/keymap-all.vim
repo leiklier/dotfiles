@@ -197,3 +197,12 @@ nnoremap <silent> <C-z> :cp<CR>
 " ============================
 " toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
+
+" ============================
+" ALE plugin
+" ============================
+" Navigate between syntax errors quickly
+" PREVIOUS
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+" NEXT
+nmap <silent> <C-j> <Plug>(ale_next_wrap)

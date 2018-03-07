@@ -168,7 +168,7 @@ set smarttab                        " Use tabs for indentation and
 set shiftwidth=2                    " Indenting is 2 spaces
 set softtabstop=-1                  " Width of softtabs (-1 => same as tabstop)
 set tabstop=2                       " Tab characters [\t] appear 2 spaces wide
-set expandtab                       " Don't use actual tab character
+"set expandtab                       " Don't use actual tab character
 set cindent                         " Stricter rules for C programs
 
 " Map <Tab> to indent and <Shift> + <Tab> to de-indent
@@ -190,7 +190,7 @@ filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:\⋮\ ,trail:·
 
 " =====================  SYNTAX  ===================
 syntax on                           " Turn on syntax highlighting
