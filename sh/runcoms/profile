@@ -2,6 +2,9 @@
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists. Therefore, it is forced to be sourced in ~/.bash_profile
 
+# We need the $DOT constant available:
+source $HOME/.dotpath
+
 #######################################################
 # ==> $PATH                                           #
 #######################################################
