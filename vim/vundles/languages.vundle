@@ -15,6 +15,9 @@ Plugin 'w0rp/ale'
 " Syntax highlighting for most programming languages
 " Plugin 'sheerun/vim-polyglot'
 
+" Integration of multiple debuggers in vim
+Plugin 'idanarye/vim-vebugger'
+
 " ============ LANGUAGE SPECIFIC ==============
 " ------------------- Git ---------------------
 " Git runtime (syntax)
@@ -38,6 +41,14 @@ Plugin 'python-mode/python-mode'
 Bundle 'mxw/vim-jsx'
 
 Bundle 'jparise/vim-graphql'
+
+" ----------------- Node.js -------------------
+" Node.js syntax highlighting
+Bundle 'moll/vim-node'
+
+" ------------------ C++ ----------------------
+"  Additional syntax highlighting for C++11/14/17
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " ----------------- LaTeX ---------------------
 " A Vim Plugin for Lively Previewing LaTeX PDF Output

@@ -43,3 +43,9 @@
 [submodule "system/macOS/automation/hammerspoon/Spoons/ControlEscape.spoon"]
 	path = system/macOS/automation/hammerspoon/Spoons/ControlEscape.spoon
 	url = git@github.com:jasonrudolph/ControlEscape.spoon.git
+[submodule "meta/dot/lib/CLI11"]
+	path = meta/dot/lib/CLI11
+	url = https://github.com/CLIUtils/CLI11.git
+[submodule "meta/dot/lib/yaml-cpp"]
+	path = meta/dot/lib/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp.git

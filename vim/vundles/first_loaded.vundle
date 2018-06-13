@@ -4,3 +4,6 @@
 " Miscellaneous auto-load Vim scripts
 " Contains Vim scripts that are used by many other Vim plugins
 Bundle "xolox/vim-misc"
+
+" Required for Vebugger:
+Plugin 'Shougo/vimproc.vim'

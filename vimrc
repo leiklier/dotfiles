@@ -50,7 +50,7 @@ endif
 let g:airline_theme='base16'
 
 " ============  STATUS LINE & COMMANDS  ===========
-set shell=bash\ -i                  " Set interactive bash as the default Vim shell
+"set shell=bash\ -i                  " Set interactive bash as the default Vim shell
 set history=1000                    " Store lots of :cmdline history
 set wildmenu                        " Show command-suggestions when pressing [tab]
 set wildmode=full                   " When showing command-suggestions; show all matching
