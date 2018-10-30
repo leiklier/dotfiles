@@ -23,6 +23,10 @@ command W w !sudo tee % > /dev/null
 " (annoying when forgetting to release <shift> on :q)
 command Q qa
 
+" Remap 'follow link' to something more easily accessible on
+" Norwegian keyboard layout
+" MNEMONIC: (g)oto link
+nnoremap <C-g> <C-]>
 
 " alias yw to yank the entire word 'yank inner word'
 " even if the cursor is halfway inside the word
