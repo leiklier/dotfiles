@@ -23,6 +23,9 @@ Bundle "Xuyuanp/nerdtree-git-plugin"
 
 Bundle "ctrlpvim/ctrlp.vim"
 
+" ----------- Automatic ctags generator - Gutentags -----------------
+Bundle "ludovicchabant/vim-gutentags"
+
 " --------------- Class outline viewer - Tagbar ---------------------
 "  DESCRIPTION:
 "  Tagbar is a Vim plugin that provides an easy way to browse the
@@ -31,10 +34,7 @@ Bundle "ctrlpvim/ctrlp.vim"
 "  tags of the current file, ordered by their scope. This means that for
 "  example methods in C++ are displayed under the class they are defined in.
 
-" NB: Currently disabled because it causes vim to throw "tty suspended" error
-" when launching vim
-
-"Bundle "majutsushi/tagbar"
+Bundle "majutsushi/tagbar"
 
 " -------------- Line number toggler - Numbers -----------------------
 "  DESCRIPTION:
