@@ -55,8 +55,6 @@ Bundle 'moll/vim-node'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " ----------------- LaTeX ---------------------
-" A Vim Plugin for Lively Previewing LaTeX PDF Output
-Plugin 'xuhdev/vim-latex-live-preview'
 
 " vimtex is a Vim plugin that provides support for writing LaTeX documents.
-" Bundle "lervag/vimtex"
+Plugin 'lervag/vimtex'

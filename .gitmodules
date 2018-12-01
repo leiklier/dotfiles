@@ -49,3 +49,6 @@
 [submodule "meta/dot/lib/yaml-cpp"]
 	path = meta/dot/lib/yaml-cpp
 	url = https://github.com/jbeder/yaml-cpp.git
+[submodule "fish/oh-my-fish"]
+	path = fish/oh-my-fish
+	url = https://github.com/oh-my-fish/oh-my-fish

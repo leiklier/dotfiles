@@ -16,4 +16,11 @@ Bundle 'honza/vim-snippets'
 " Easy commenting
 Bundle "scrooloose/nerdcommenter.git"
 
+" Bracketed paste
+Bundle "ConradIrwin/vim-bracketed-paste"
+
+" Realtime collaboration using Floobits
+" Add username and secret in ~/.floorc.json
+Plugin 'floobits/floobits-neovim'
+
 " ============= LANGUAGE-SPECIFIC ===============

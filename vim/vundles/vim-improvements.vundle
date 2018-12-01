@@ -36,4 +36,4 @@ Bundle "jamessan/vim-gnupg"
 
 
 " CoVim - Collaborative editing in vim! Google-docs like editing
-" Bundle "FredKSchott/CoVim"
+Bundle "FredKSchott/CoVim"

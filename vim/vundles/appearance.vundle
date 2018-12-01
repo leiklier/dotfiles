@@ -31,3 +31,6 @@ Plugin 'Yggdroot/indentLine'
 " Show different levels of parentheses in different colors
 "Plugin 'luochen1990/rainbow'
 Plugin 'junegunn/rainbow_parentheses.vim'
+
+" Better navigate and highlight matching words
+Bundle "andymass/vim-matchup"
