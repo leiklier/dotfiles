@@ -11,7 +11,7 @@ set exrc                            " Force sourcing of .vimrc in working direct
 let mapleader=","                   " Change leader to a comma because the backslash is
                                     " too far away. That means all \x commands
                                     " turn into ,x. The mapleader has to be
-                                    " set before vundle starts loading all the
+                                    " set before vim-plug starts loading all the
                                     " plugins.
 let g:mapleader=","                 " ---------------- || -------------------
 let g:maplocalleader="-"
@@ -35,13 +35,21 @@ if empty(v:servername) && exists('*remote_startserver')
   call remote_startserver('VIM')
 endif
 
-" -----------  Vundle Initialization  -----------
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
+" -----------  vim-plug Initialization  -----------
+" Automatic installation of vim-plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source "~/.vimrc"
 endif
-au BufNewFile,BufRead *.vundle set filetype=vim
+
+" This loads all the plugins specified in ~/.vim/vim-plugs.vim
+" Use vim-plug plugin to manage all other plugins
+if filereadable(expand("~/.vim/vim-plugs.vim"))
+  source ~/.vim/vim-plugs.vim
+endif
+au BufNewFile,BufRead *.vim-plug set filetype=vim
+
 
 " =================== APPEARANCE  =================
 
@@ -95,7 +103,7 @@ set gcr=a:blinkon0                  " Disable cursor blink
 set cursorline                      " Highlight cursorline
 
 " Don't move the cursor when leaving insert mode
-" (WARNING: This may cause certain vundles to misbehave)
+" (WARNING: This may cause certain vim-plugs to misbehave)
 au InsertLeave * call cursor([getpos('.')[1], getpos('.')[2]+1])
 
 " Jump to last known cursor position when reopening a file
