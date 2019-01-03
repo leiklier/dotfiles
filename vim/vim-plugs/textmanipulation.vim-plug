@@ -5,25 +5,25 @@
 
 " ==================== GLOBAL ===================
 " Language-aware code completion engine
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --all' }
 
 " Textual snippets
 " The engine
-Bundle "SirVer/ultisnips"
+Plug 'SirVer/ultisnips'
 " A collection of some snippets
-Bundle 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 " Expanding abbreviations
-Bundle "mattn/emmet-vim"
+Plug 'mattn/emmet-vim'
 
 " Easy commenting
-Bundle "scrooloose/nerdcommenter.git"
+Plug 'scrooloose/nerdcommenter'
 
 " Bracketed paste
-Bundle "ConradIrwin/vim-bracketed-paste"
+Plug 'ConradIrwin/vim-bracketed-paste'
 
 " Realtime collaboration using Floobits
 " Add username and secret in ~/.floorc.json
-Plugin 'floobits/floobits-neovim'
+Plug 'floobits/floobits-neovim'
 
 " ============= LANGUAGE-SPECIFIC ===============

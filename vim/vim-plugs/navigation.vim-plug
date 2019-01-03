@@ -5,26 +5,26 @@
 
 " ------------------ File explorer - NERDTree ---------------------
 " The file explorer itself
-Bundle "scrooloose/nerdtree.git"
+Plug 'scrooloose/nerdtree'
 
 " Extension that makes NERDTree feel like a true panel,
 " independent of tabs
-Bundle "jistr/vim-nerdtree-tabs.git"
+Plug 'jistr/vim-nerdtree-tabs'
 
 " Extension that adds colors and icons to listings
-Bundle "tiagofumo/vim-nerdtree-syntax-highlight.git"
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Extension that shows git status flags in explorer
-Bundle "Xuyuanp/nerdtree-git-plugin"
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " -------------------- File finder - CtrlP --------------------------
 "  DESCRIPTION:
 "  Full path fuzzy file, buffer, mru, tag, ... finder for VIm
 
-Bundle "ctrlpvim/ctrlp.vim"
+Plug 'ctrlpvim/ctrlp.vim'
 
 " ----------- Automatic ctags generator - Gutentags -----------------
-Bundle "ludovicchabant/vim-gutentags"
+Plug 'ludovicchabant/vim-gutentags'
 
 " --------------- Class outline viewer - Tagbar ---------------------
 "  DESCRIPTION:
@@ -34,14 +34,14 @@ Bundle "ludovicchabant/vim-gutentags"
 "  tags of the current file, ordered by their scope. This means that for
 "  example methods in C++ are displayed under the class they are defined in.
 
-Bundle "majutsushi/tagbar"
+Plug 'majutsushi/tagbar'
 
 " -------------- Line number toggler - Numbers -----------------------
 "  DESCRIPTION:
 "  This plugin alternates between relative numbering and absolute numbering
 "  for the active window depending on the mode you are in.
 
-Bundle "myusuf3/numbers.vim"
+Plug 'myusuf3/numbers.vim'
 
 " ---------------- Session manager - Session -------------------------
 "  DESCRIPTION:
@@ -50,6 +50,6 @@ Bundle "myusuf3/numbers.vim"
 "  Vim editing sessions. It works by generating a Vim script that restores your current
 "  settings and the arrangement of tab pages and/or split windows and the files they contain.
 
-Bundle "xolox/vim-session"
+Plug 'xolox/vim-session'
 
 

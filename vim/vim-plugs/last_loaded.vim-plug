@@ -4,5 +4,5 @@
 
 
 " Customizable and extendable glyphs (icons) settings
-" (  Referenced in: appearance.vundle  )
-Bundle "ryanoasis/vim-devicons.git"
+" (  Referenced in: appearance.vim-plug  )
+Plug 'ryanoasis/vim-devicons'

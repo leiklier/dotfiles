@@ -10,26 +10,26 @@
 " of languages.
 
 " Async syntax checking for most programming languages
-Plugin 'w0rp/ale'
+Plug 'w0rp/ale'
 
 " Syntax highlighting for most programming languages
 " Plugin 'sheerun/vim-polyglot'
 
 " Integration of multiple debuggers in vim
-Plugin 'idanarye/vim-vebugger'
+Plug 'idanarye/vim-vebugger'
 
 " ============ LANGUAGE SPECIFIC ==============
 " ------------------- Git ---------------------
 " Git runtime (syntax)
 " More info: http://www.vim.org/scripts/script.php?script_id=1654
-Bundle "tpope/vim-git"
+Plug 'tpope/vim-git'
 
 " ---------------- Markdown -------------------
 " Syntax highlighting, matching rules and mappings
 " Dependency -----------------
-" Plugin 'godlygeek/tabular'
+" Plug 'godlygeek/tabular'
 " ----------------------------
-Plugin 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 
 " ----------------- Python --------------------
 " Provides static analysis, refactoring, folding,
@@ -39,22 +39,22 @@ Plugin 'plasticboy/vim-markdown'
 
 " --------------- Javascript ------------------
 "Javascript syntax highlighting and improved indentation
-Bundle 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 
 " JSX syntax highlighting and indenting
-Bundle 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx'
 
-Bundle 'jparise/vim-graphql'
+Plug 'jparise/vim-graphql'
 
 " ----------------- Node.js -------------------
 " Node.js syntax highlighting
-Bundle 'moll/vim-node'
+Plug 'moll/vim-node'
 
 " ------------------ C++ ----------------------
 "  Additional syntax highlighting for C++11/14/17
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " ----------------- LaTeX ---------------------
 
 " vimtex is a Vim plugin that provides support for writing LaTeX documents.
-Plugin 'lervag/vimtex'
+Plug 'lervag/vimtex'

@@ -6,31 +6,31 @@
 " and extends the UX by adding visual elements to the editorr
 
 " Use base16 color scheme
-Bundle "chriskempson/base16-vim"
+Plug 'chriskempson/base16-vim'
 
 " More fancy splash screen
-Bundle "mhinz/vim-startify"
+Plug 'mhinz/vim-startify'
 
 " Visually and functionally improved status-/tabline
-Bundle "vim-airline/vim-airline"
-Bundle "vim-airline/vim-airline-themes"
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Add filetype glyphs to other plugins such as NERDTree, vim-airline, etc.
-" Bundle "ryanoasis/vim-devicons"               NB: LOADS in "lastloaded.vim"
+" Plug 'ryanoasis/vim-devicons'               NB: LOADS in "lastloaded.vim"
 
 " Highlight color keywords, such as #d13632 and rgb(209, 210, 44)
-Bundle "ap/vim-css-color"
+Plug 'ap/vim-css-color'
 
-Bundle "jby/tmux.vim.git"
-Bundle "morhetz/gruvbox"
-Bundle "xsunsmile/showmarks.git"
+Plug 'jby/tmux.vim'
+Plug 'morhetz/gruvbox'
+Plug 'xsunsmile/showmarks'
 
 " Show space indentation visually
-Plugin 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 
 " Show different levels of parentheses in different colors
 "Plugin 'luochen1990/rainbow'
-Plugin 'junegunn/rainbow_parentheses.vim'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 " Better navigate and highlight matching words
-Bundle "andymass/vim-matchup"
+Plug 'andymass/vim-matchup'
