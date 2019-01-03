@@ -13,6 +13,9 @@ Bundle "SirVer/ultisnips"
 " A collection of some snippets
 Bundle 'honza/vim-snippets'
 
+" Expanding abbreviations
+Bundle "mattn/emmet-vim"
+
 " Easy commenting
 Bundle "scrooloose/nerdcommenter.git"
 
